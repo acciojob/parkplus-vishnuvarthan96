@@ -33,9 +33,9 @@ public class PaymentServiceImpl implements PaymentService {
         else if(updateMode.equals("UPI"))
             payment.setPaymentMode(PaymentMode.UPI);
         else
-            throw new Exception("Payment mode are detected");
+            throw new Exception("Payment mode not detected");
         if(amountSent < bill)
-            throw new Exception("Insufficient amount");
+            throw new Exception("Insufficient Amount");
 
         spot.setOccupied(false);
         payment.setPaymentCompleted(true);

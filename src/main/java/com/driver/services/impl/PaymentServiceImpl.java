@@ -37,7 +37,7 @@ public class PaymentServiceImpl implements PaymentService {
         if(amountSent < bill)
             throw new Exception("Insufficient Amount");
 
-        spot.setOccupied(false);
+        spot.setOccupied(true);
         payment.setPaymentCompleted(true);
         payment.setReservation(reservation);
         reservation.setPayment(payment);

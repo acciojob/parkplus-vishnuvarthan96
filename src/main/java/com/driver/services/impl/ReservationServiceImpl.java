@@ -75,6 +75,7 @@ public class ReservationServiceImpl implements ReservationService {
      optimalSpot.setReservationList(reservationList);
      userRepository3.save(user);
      spotRepository3.save(optimalSpot);
+     reservationRepository3.save(reservation);
      return reservation;
     }
 }
